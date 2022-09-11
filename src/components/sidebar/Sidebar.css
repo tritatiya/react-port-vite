@@ -1,0 +1,36 @@
+.aside{
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.3rem 0;
+    position: fixed;
+    width: inherit;
+}
+
+.nav_list{
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.nav_link{
+    font-size: 1.5rem;
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+    transition: 0.3s;
+}
+
+.nav_link:hover{
+    color: hsl(43, 100%, 68%);
+}
+
+.copylight{
+    color:  hsl(245, 15%, 65%);
+    font-size: var(--small-font-size);
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+}
