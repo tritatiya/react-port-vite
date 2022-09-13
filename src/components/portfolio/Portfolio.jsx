@@ -26,7 +26,8 @@ const Portfolio = () => {
         <div className="work_container">
             {items.map((element, index) => {
                 return(
-                    <div className="work_card">
+                    
+                    <div  key={element.id} className="work_card">
                         <div className="work_thumbnail">
                             <img src={element.image} alt="work-img" className="work_img" />
                             <div className="work_mask"></div>

@@ -13,6 +13,7 @@ const Resume = () => {
                     if(value.category === 'education') {
                         return (
                             <Card 
+                                key={index}
                                 icon={value.icon}
                                 title={value.title}
                                 year={value.year}
@@ -27,6 +28,7 @@ const Resume = () => {
                     if(value.category === 'experience') {
                         return (
                             <Card 
+                                key={index}
                                 icon={value.icon}
                                 title={value.title}
                                 year={value.year}
