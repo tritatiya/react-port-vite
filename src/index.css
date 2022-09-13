@@ -93,3 +93,52 @@ button{
 img{
   max-width: 100%;
 }
+
+/* Reuseable class */
+.container{
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.section{
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+.section_title{
+  font-size: var(--h1-font-size);
+  margin-left: 0.875rem;
+  font-weight: var(--font-bold);
+  margin-bottom: 3.75rem;
+}
+
+.btn{
+  border: 1px solid transparent;
+  line-height: 1;
+  border-radius: 1.875rem;
+  background-color: var(--first-color) ;
+  padding: 0.75rem 2rem;
+  color: #fff;
+  font-weight: var(--font-bold);
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  display: inline-block;
+  cursor: pointer;
+}
+
+@keyframes button-push {
+  50%{
+      transform: scale(0.8);
+  }
+
+  100%{
+      transform: scale(1);
+  }
+}
+
+.btn:hover{
+
+  animation: button-push 0.3s linear 1;
+  
+}

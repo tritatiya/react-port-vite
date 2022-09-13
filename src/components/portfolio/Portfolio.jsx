@@ -6,29 +6,35 @@ import './Portfolio.css'
 const Portfolio = () => {
 
     const [items, setItems] = useState(Menu);
+    const filterItem = (item) =>{
+        const update = Menu.filter((element) => {
+            return element.category === item
+        })
+        setItems(update)
+    }
 
   return (
-    <div className='work'>
+    <div className='container section' id='portfolio'>
         <h2 className="section_title">Recent Works</h2>
         <div className="work_filters">
-            <span className="work_item">Everything</span>
-            <span className="work_item">Creative</span>
-            <span className="work_item">Art</span>
-            <span className="work_item">Design</span>
-            <span className="work_item">Branding</span>
+            <span className="work_item" onClick={()=>setItems(Menu)}>Everything</span>
+            <span className="work_item" onClick={()=> filterItem('Creative')}> Creative</span>
+            <span className="work_item" onClick={()=> filterItem('Art')}>Art</span>
+            <span className="work_item" onClick={()=> filterItem('Design')}>Design</span>
+            <span className="work_item" onClick={()=> filterItem('Branding')}>Branding</span>
         </div>
         <div className="work_container">
             {items.map((element, index) => {
                 return(
                     <div className="work_card">
                         <div className="work_thumbnail">
-                            <img src={element.image} alt="" className="work_img" />
+                            <img src={element.image} alt="work-img" className="work_img" />
                             <div className="work_mask"></div>
                         </div>
-                        <span className="work_category"></span>
-                        <h3 className="work_title"></h3>
+                        <span className="work_category">{element.category}</span>
+                        <h3 className="work_title">{element.title}</h3>
                         <a href="" className="work_button">
-                            <i></i>
+                        <i className="icon-link work_button-icon"></i>
                         </a>  
                     </div>
                 )

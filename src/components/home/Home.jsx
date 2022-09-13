@@ -5,7 +5,7 @@ import HeaderSocials from './HeaderSocials'
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div className='home' id='home'>
         <div className="intro">
             <img src={Me} alt="me-img" className='home_img'/>
             <h1 className="home_name">YoungTriNeverBroke</h1>
